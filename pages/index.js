@@ -1,19 +1,16 @@
 import { Canvas } from "@react-three/fiber";
 import { Text3D } from "@react-three/drei";
 import { Suspense } from "react";
-
+import Earth from "../components/Earth";
 export default function Home() {
   return (
     <div>
       <Canvas
         gl={{ antialias: false, powerPreference: "high-performance" }}
-        style={{ height: "100vh!important", width: "100vw!important" }}
+        style={{ height: "100vh!important" }}
       >
         <Suspense fallback={null}>
-          <Text3D font={"./opensans.json"} position={[-5, 0, 0]}>
-            @sharathkrml
-            <meshNormalMaterial />
-          </Text3D>
+          <Earth />
         </Suspense>
       </Canvas>
     </div>
